@@ -6,4 +6,6 @@
     <!-- 把创建的对象交给spring来管理 -->
     <bean id="accountDao" class="com.xupt.ff.dao.impl.accountDaoImpl" ></bean>
     <bean id="accountService" class="com.xupt.ff.service.impl.accountServiceImpl" ></bean>
+
+    
 </beans>
