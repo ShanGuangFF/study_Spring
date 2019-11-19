@@ -3,6 +3,8 @@ package com.xupt.ff.factory;
 import com.xupt.ff.service.IAccountService;
 import com.xupt.ff.service.impl.accountServiceImpl;
 
+import java.util.Date;
+
 /**
  * @author cc_ff
  * @create 2019-11-11 下午10:22
@@ -11,6 +13,6 @@ import com.xupt.ff.service.impl.accountServiceImpl;
 public class InstanceFactory {
 
     public IAccountService getAccountService(){
-        return new accountServiceImpl();
+        return new accountServiceImpl("简十初",18,new Date());
     }
 }

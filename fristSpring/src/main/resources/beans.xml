@@ -5,7 +5,23 @@
 
     <!-- 把创建的对象交给spring来管理 -->
     <bean id="accountDao" class="com.xupt.ff.dao.impl.accountDaoImpl" ></bean>
-    <bean id="accountService" class="com.xupt.ff.service.impl.accountServiceImpl" ></bean>
+    <!--依赖注入（构造函数版）-->
+    <bean id="accountService1" class="com.xupt.ff.service.impl.accountServiceImpl" >
+        <constructor-arg name="name" value="文一生" ></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
+        <constructor-arg name="date" ref="birthDate"></constructor-arg>
+    </bean>
+    <bean id="birthDate" class="java.util.Date"></bean>
 
-    
+    <bean id="accountService2" class="com.xupt.ff.service.impl.accountServiceImpl" >
+        <property name="name" value="李姜丰"></property>
+        <property name="age" value="18"></property>
+        <property name="date" ref="birthDate"></property>
+    </bean>
+    <!--使用普通工厂中的方法创建对象（某个类中的方法）-->
+    <bean id="InstanceFactory" class="com.xupt.ff.factory.InstanceFactory" ></bean>
+    <bean id="accountService3" factory-bean="InstanceFactory" factory-method="getAccountService" init-method="init" destroy-method="destroy"></bean>
+
+    <!--使用工厂中的静态方法创建对象存入Spring-->
+    <bean id="accountService4" class="com.xupt.ff.factory.StaticFactory" factory-method="getAccountService" scope="prototype"></bean>
 </beans>

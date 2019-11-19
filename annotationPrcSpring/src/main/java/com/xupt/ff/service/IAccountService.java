@@ -2,13 +2,9 @@ package com.xupt.ff.service;
 
 /**
  * @author cc_ff
- * @create 2019-11-10 上午1:01
+ * @create 2019-11-19 下午9:45
  * @action
  */
 public interface IAccountService {
-    public void init();
-
-    public void destroy();
-
     public void saveAccount();
 }
