@@ -1,4 +1,4 @@
-#Spring常用注解
+# Spring常用注解
 * 用于创建对象的  
 他们的作用就和在XML配置文件中编写一个<bean>标签的实现的功能是一样的  
 CommComponent：  
