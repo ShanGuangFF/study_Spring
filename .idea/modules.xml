@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/annotationPrcSpring/annotationPrcSpring.iml" filepath="$PROJECT_DIR$/annotationPrcSpring/annotationPrcSpring.iml" />
       <module fileurl="file://$PROJECT_DIR$/fristSpring/fristSpring.iml" filepath="$PROJECT_DIR$/fristSpring/fristSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmlCase/xmlCase.iml" filepath="$PROJECT_DIR$/xmlCase/xmlCase.iml" />
     </modules>
   </component>
 </project>

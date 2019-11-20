@@ -6,13 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="annotationPrcSpring" />
         <module name="fristSpring" />
+        <module name="annotationPrcSpring" />
+        <module name="xmlCase" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="annotationPrcSpring" target="1.5" />
       <module name="fristSpring" target="1.5" />
+      <module name="xmlCase" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
