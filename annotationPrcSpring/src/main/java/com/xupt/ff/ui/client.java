@@ -1,6 +1,6 @@
 package com.xupt.ff.ui;
 
-import com.xupt.ff.service.impl.accountServiceImpl;
+import com.xupt.ff.service.Impl.accountServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,6 +15,6 @@ public class client {
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
 
         accountServiceImpl accountService = ac.getBean("accountService",accountServiceImpl.class);
-        accountService.saveAccount();
+        // accountService.saveAccount();
     }
 }

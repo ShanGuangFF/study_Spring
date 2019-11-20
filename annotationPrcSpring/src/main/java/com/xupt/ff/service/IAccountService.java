@@ -1,10 +1,44 @@
 package com.xupt.ff.service;
 
+import com.xupt.ff.domain.Account;
+
+import java.util.List;
+
 /**
  * @author cc_ff
- * @create 2019-11-19 下午9:45
- * @action
+ * @create 2019-11-20 下午5:49
+ * @action 账户的业务层接口
  */
 public interface IAccountService {
-    public void saveAccount();
+
+    /**
+     * @action 查询所有
+     * @return 用户集合
+     */
+    List<Account> findAll();
+
+    /**
+     * @action 通过Id查询账户
+     * @return
+     */
+    Account findAccountById(int accountId);
+
+    /**
+     * @action 保存用户
+     * @param account
+     */
+    void saveAccount(Account account);
+
+    /**
+     * @action 更新用户
+     * @param account
+     */
+    void updateAccount(Account account);
+
+    /**
+     * @action 根据id删除用户
+     * @param accountId
+     */
+    void deleteAccount(int accountId);
+
 }
