@@ -41,4 +41,11 @@ public interface IAccountService {
      */
     void deleteAccount(int accountId);
 
+    /**
+     * @action 模拟转账
+     * @param sourceName
+     * @param targetName
+     * @param money
+     */
+    void transfer(String sourceName,String targetName,double money);
 }

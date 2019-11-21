@@ -65,4 +65,20 @@ public class accountDaoImpl implements IAccountDao {
             e.printStackTrace();
         }
     }
+
+    public Account findByName(String name){
+        try {
+            List<Account> accountList = runner.query("select * from accountMoney where name = ?", new BeanListHandler<Account>(Account.class), name);
+            if(accountList == null || accountList.size() == 0){
+                return null;
+            }else if(accountList.size() > 1){
+                throw new  RuntimeException("结果集不唯一，名字有误");
+            }else {
+                return accountList.get(0);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
